@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -94,6 +95,12 @@ namespace Pages
                 AppId = Configuration["Authentication:Facebook:AppId"],
                 AppSecret = Configuration["Authentication:Facebook:AppSecret"]
             });
+            app.UseGoogleAuthentication(new GoogleOptions
+            {
+                ClientId = "890692129897-s5knnpmp0jf6eds7k3kin4rv20cjm5u6.apps.googleusercontent.com",
+                ClientSecret = "XTgDhvUEKTnZutT0i1GdOk0S"
+            });
+
 
             app.UseMvc(routes =>
             {
