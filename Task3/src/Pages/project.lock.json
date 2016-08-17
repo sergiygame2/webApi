@@ -3,6 +3,20 @@
   "version": 2,
   "targets": {
     ".NETCoreApp,Version=v1.0": {
+      "BundlerMinifier.Core/2.2.281": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.App": "1.0.0",
+          "NUglify": "1.5.1",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/dotnet-bundle.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/dotnet-bundle.dll": {}
+        }
+      },
       "Libuv/1.9.0": {
         "type": "package",
         "dependencies": {
@@ -43,7 +57,7 @@
           }
         }
       },
-      "MailKit/1.4.2": {
+      "MailKit/1.4.2.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -149,10 +163,10 @@
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.Google/1.0.0-rc2-final": {
+      "Microsoft.AspNetCore.Authentication.Google/1.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AspNetCore.Authentication.OAuth": "1.0.0-rc2-final"
+          "Microsoft.AspNetCore.Authentication.OAuth": "1.0.0"
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Google.dll": {}
@@ -2383,6 +2397,19 @@
         },
         "runtime": {
           "lib/netstandard1.0/NuGet.Versioning.dll": {}
+        }
+      },
+      "NUglify/1.5.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.Security.Cryptography.Algorithms": "4.2.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/NUglify.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/NUglify.dll": {}
         }
       },
       "Portable.BouncyCastle/1.8.1.1": {
@@ -4623,6 +4650,18 @@
     }
   },
   "libraries": {
+    "BundlerMinifier.Core/2.2.281": {
+      "sha512": "cUiOJT4rjubD9tOsLo0ruPqfLEy5GUByj9JZ2fVlU5uR4QYTIN//BpeQfsmBwIU/GWrpVJqYsyX474Bm0U3XHQ==",
+      "type": "package",
+      "path": "BundlerMinifier.Core/2.2.281",
+      "files": [
+        "BundlerMinifier.Core.2.2.281.nupkg.sha512",
+        "BundlerMinifier.Core.nuspec",
+        "lib/net452/dotnet-bundle.exe",
+        "lib/netcoreapp1.0/dotnet-bundle.dll",
+        "lib/netcoreapp1.0/dotnet-bundle.runtimeconfig.json"
+      ]
+    },
     "Libuv/1.9.0": {
       "sha512": "9Q7AaqtQhS8JDSIvRBt6ODSLWDBI4c8YxNxyCQemWebBFUtBbc6M5Vi5Gz1ZyIUlTW3rZK9bIr5gnVyv0z7a2Q==",
       "type": "package",
@@ -4641,12 +4680,12 @@
         "runtimes/win7-x86/native/libuv.dll"
       ]
     },
-    "MailKit/1.4.2": {
-      "sha512": "E4MwXP8005leMJFKknfAR/xfhhNRs5QSjcz2wE0kjMHzBBJSFGb6ZpXxwRTmWXqJbEKjNs940vM4vtb1xj4Y4Q==",
+    "MailKit/1.4.2.1": {
+      "sha512": "ZK8CzuaW5yRD9eGbwiAjUFIQGwyuzYcTmqwq3FJ6rBuQHEcq26LP4FpltxEsV1Y2JKTOlbU+GI4vOu96GPuaXg==",
       "type": "package",
-      "path": "MailKit/1.4.2",
+      "path": "MailKit/1.4.2.1",
       "files": [
-        "MailKit.1.4.2.nupkg.sha512",
+        "MailKit.1.4.2.1.nupkg.sha512",
         "MailKit.nuspec",
         "lib/MonoAndroid10/MailKit.dll",
         "lib/MonoAndroid10/MailKit.xml",
@@ -4731,12 +4770,12 @@
         "lib/netstandard1.3/Microsoft.AspNetCore.Authentication.Facebook.xml"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.Google/1.0.0-rc2-final": {
-      "sha512": "wpqbkYSqoASf+73o7WE9C93k/2+YggPSgKq4OcB+MsRuhSDLQhovRuAiPoeu3X86isxzI6vqLcHUvn9002eAmQ==",
+    "Microsoft.AspNetCore.Authentication.Google/1.0.0": {
+      "sha512": "Y11elEMu4lP5qFnQ0UGbpe8d0uOlaT1KLkgDiRKpPvy1MqmtgPtVjqzvX9GG6+dJ187xY8N7Y1gWlTyAZh7rhg==",
       "type": "package",
-      "path": "Microsoft.AspNetCore.Authentication.Google/1.0.0-rc2-final",
+      "path": "Microsoft.AspNetCore.Authentication.Google/1.0.0",
       "files": [
-        "Microsoft.AspNetCore.Authentication.Google.1.0.0-rc2-final.nupkg.sha512",
+        "Microsoft.AspNetCore.Authentication.Google.1.0.0.nupkg.sha512",
         "Microsoft.AspNetCore.Authentication.Google.nuspec",
         "lib/net451/Microsoft.AspNetCore.Authentication.Google.dll",
         "lib/net451/Microsoft.AspNetCore.Authentication.Google.xml",
@@ -6806,6 +6845,21 @@
         "lib/net45/NuGet.Versioning.xml",
         "lib/netstandard1.0/NuGet.Versioning.dll",
         "lib/netstandard1.0/NuGet.Versioning.xml"
+      ]
+    },
+    "NUglify/1.5.1": {
+      "sha512": "iYV/OtSs+HgyE/RilY7UvGXYec6r0OJenWlPIdX/IivedVpSSdzxvPvUIyWpiV/6ad7VjantH0/6oaOhAZbaoQ==",
+      "type": "package",
+      "path": "NUglify/1.5.1",
+      "files": [
+        "NUglify.1.5.1.nupkg.sha512",
+        "NUglify.nuspec",
+        "lib/net35/NUglify.dll",
+        "lib/net35/NUglify.xml",
+        "lib/net40/NUglify.dll",
+        "lib/net40/NUglify.xml",
+        "lib/netstandard1.3/NUglify.dll",
+        "lib/netstandard1.3/NUglify.xml"
       ]
     },
     "Portable.BouncyCastle/1.8.1.1": {
@@ -11687,10 +11741,11 @@
   },
   "projectFileDependencyGroups": {
     "": [
-      "MailKit >= 1.4.2",
+      "BundlerMinifier.Core >= 2.2.281",
+      "MailKit >= 1.4.2.1",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.Facebook >= 1.0.0",
-      "Microsoft.AspNetCore.Authentication.Google >= 1.0.0-rc2-final",
+      "Microsoft.AspNetCore.Authentication.Google >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 1.0.0",
@@ -11720,20 +11775,6 @@
   },
   "tools": {
     ".NETCoreApp,Version=v1.0": {
-      "BundlerMinifier.Core/2.0.238": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.App": "1.0.0",
-          "NUglify": "1.5.0",
-          "Newtonsoft.Json": "9.0.1"
-        },
-        "compile": {
-          "lib/netcoreapp1.0/dotnet-bundle.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp1.0/dotnet-bundle.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Razor.Tools/1.0.0-preview2-final": {
         "type": "package",
         "dependencies": {
@@ -11821,7 +11862,6 @@
   },
   "projectFileToolGroups": {
     ".NETCoreApp,Version=v1.0": [
-      "BundlerMinifier.Core >= 2.0.238",
       "Microsoft.AspNetCore.Razor.Tools >= 1.0.0-preview2-final",
       "Microsoft.AspNetCore.Server.IISIntegration.Tools >= 1.0.0-preview2-final",
       "Microsoft.EntityFrameworkCore.Tools >= 1.0.0-preview2-final",

@@ -92,8 +92,8 @@ namespace Pages
             // Add external authentication middleware below. To configure them please see http://go.microsoft.com/fwlink/?LinkID=532715
             app.UseFacebookAuthentication(new FacebookOptions()
             {
-                AppId = Configuration["Authentication:Facebook:AppId"],
-                AppSecret = Configuration["Authentication:Facebook:AppSecret"]
+                AppId = "235726570155665",
+                AppSecret = "5a874129278465d113c11d600de2d270"
             });
             app.UseGoogleAuthentication(new GoogleOptions
             {
