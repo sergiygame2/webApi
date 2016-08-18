@@ -1,0 +1,10 @@
+@model IEnumerable<Pages.Models.Page>
+
+<h3>Related pages</h3>
+
+<ul>
+    @foreach (var rp in Model)
+    {
+        <li>@rp.Title</li>
+    }
+</ul>

@@ -1,0 +1,47 @@
+@model IEnumerable<Pages.Models.NavLink>
+
+@{
+    ViewData["Title"] = "NavLink";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NavLinkTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Page.UrlName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NavLinkTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Page.UrlName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.NLId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.NLId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.NLId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,8 @@
+@model IEnumerable<Pages.Models.Page>
+
+<ul>
+    @foreach (var rp in Model)
+    {
+        <li>@Html.ActionLink("" + @rp.UrlName, "Custom", "Pages", new { id = @rp.PageID })</li>
+    }
+</ul>
